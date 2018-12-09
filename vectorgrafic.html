@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head> 
+
+<title>Representació gràfica de Vectors</title>
+<link href="css/estils.css" rel="stylesheet" type="text/css"/>
+<script src="js/vectors.js"></script>
+
+</head>
+
+<body >
+<div id="columnagran">
+
+<div id="peucolumna">
+	<h1 style="margin-left: 40px;">Representació gràfica de Vectors</h1>
+</div>
+
+<div id="peucolumna">
+<input style="margin-left: 340px;" id="pintar" type="button" value="Representar" onclick = "pinta()">
+<input  id="esborrar" type="button" value="Esborrar" onclick = "esborra()"><p>
+<div style="margin-left: 70px; id="etiqueta vector u"> 
+ u = ( <input id="u1" onchange= "introcoef()" size="2" >,
+ <input id="u2" onchange= "introcoef()" size="2" >,
+ <input id="u3" onchange= "introcoef()" size="2" > )</div><p>
+<canvas style="margin-left: 20px;" id="TRIANGLE" width="920" height="420"></canvas>
+
+</div>
+
+
+
+
+<!-- Peu de pàgina -->
+<div id="peucolumna"><p ALIGN=right style="margin-right: 30px; "><small>Toni Bedmar 2015</small></p></div>
+</div></div>
+</body>
+
+</html>

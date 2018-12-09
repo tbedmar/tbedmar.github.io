@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Números primos" />
+  <meta name="keywords" content="Descomposición factorial de un número, Números primos" />
+  <title>Descomposición factorial de un número</title>
+  <link  rel="stylesheet" href="css/estils2.css" />
+  <script src="js/eratostenes.js"></script>
+  <script SRC="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js">
+	MathJax.Hub.Config({
+ 		extensions: ["tex2jax.js"],
+  		jax: ["input/TeX","output/HTML-CSS"],
+  		tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+	});
+  </script>
+
+</head>
+
+
+<body onload="carregamenuipeu()">
+
+<div id="caixaprincipal">
+
+<nav>
+	<ul>
+	<div id="pelmenu"><li><a target="_self" href="eratostenes.html">Eratóstenes</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="descomposicio.html">Descomposición</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="cifrasdepi.html">Cifras de $\pi$</a></li></div>
+	
+</ul>
+</nav>
+<header>
+
+<h1>Teoría de Números</h1>
+
+
+</header>
+
+<section>
+
+<p style="margin-left: 30px;" ><h3>Descomposición factorial de un número</h3></p>
+<br>
+<p style="margin-left: 60px;" >n &nbsp;&nbsp;<input id="ene" size="2"value="0"> <br></p>
+
+<br>
+<input id="pinchable" type="button" value="Muestra la descomposición factorial de n" onclick = "descomposicio()" style="margin-left: 60px;" />
+
+<br>
+<br>
+<div id="resultado" style="display:none"></div>
+<br>
+<br>
+
+</section>
+</div>
+
+<footer><div id="peu"></div></footer>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,117 @@
+/* Els meus estils */
+*{
+margin: 0px;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup {
+	display: block;
+}
+
+html,body {
+   width: 100%;
+   height:100%;
+}
+body {
+	text-align: center;
+	background-color: #FFFFFF ;
+	
+}
+
+#caixaprincipal{
+	min-height:100%;
+	width: 860px;
+	margin: 0 auto;
+	background-color: #F0F0F0 ;
+	text-align: left;
+}
+
+#resultado 
+  {background-color:#A4A4A4; float:left ;  margin:3px 60px ; padding:6px 15px ; border-radius:5px; color:  #FAFAFA;font-weight:bold;}
+#resultado2 {float:left ; width:440px ; margin:3px 60px ; padding:6px ; border-radius:5px }
+  
+header {
+	background: #D8D8D8;
+	padding: 15px 30px 15px 30px;
+}
+
+footer {
+	background: #585858;
+	clear: both;
+	padding: 10px 10px 10px 10px;
+	text-align: right;
+	color:  #FAFAFA;
+	border-top: 2px solid #FFFFFF;
+        position: relative;
+        margin-top: -50px;
+}
+section {overflow: auto; padding: 20px;	 margin-bottom: 40px;}
+
+li {
+
+list-style: none;
+padding: 10px 30px 2px 10px;
+font: bold 14px verdana, sans-serif;
+}
+
+#informacio{
+	font: 12px verdana, sans-serif;
+	margin-left: 40px;
+}
+#pelmenu{margin: 0px; height:35px;display: inline-block; box-sizing: border-box;}
+#pelmenu:hover{outline: 0;border-bottom-style: solid;	border-color: #6E6E6E}
+a {color: #000000;text-decoration: none;}
+a:visited {color: #000000;}
+a:hover{color: #6E6E6E;}
+
+.descomposicio {
+       
+	border:0px ;       
+	border-collapse:separate;
+	
+       
+       }
+
+.descomposicio td {
+
+       border:0px ;
+       padding:2px;
+       text-align: right;
+       }
+
+.esquerra { float: left;  }
+caption {
+       
+       font-size:20px;
+       padding:12px;
+       font-family:"Arial", sans-serif;
+       text-align: left;
+ 
+       }
+thead {
+          
+       background-color:#A4A4A4;
+       font-size:18px;
+       font-family:"Arial", sans-serif;
+       
+       }
+    tr.color {
+       background-color:#ACACAC;
+       }
+    td {
+       border:1px solid black;
+       padding:5px;
+       text-align: right;
+       }
+
+.mevataula td {
+
+       border:0px ;
+       padding:1px 30px;
+       
+       }
+.clear{clear:both;}
+
+#columna { float:left ; width: 40% ; margin:3px 3px ; padding:6px ; }
+
+

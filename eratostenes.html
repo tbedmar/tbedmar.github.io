@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Números primos" />
+  <meta name="keywords" content="Eratóstenes, Números primos" />
+  <title>Criba de Eratóstenes</title>
+  <link  rel="stylesheet" href="css/estils2.css" />
+  <script src="js/eratostenes.js"></script>
+  <script SRC="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js">
+	MathJax.Hub.Config({
+ 		extensions: ["tex2jax.js"],
+  		jax: ["input/TeX","output/HTML-CSS"],
+  		tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+	});
+  </script>
+
+</head>
+
+
+<body onload="carregamenuipeu()">
+
+<div id="caixaprincipal">
+
+<nav>
+	<ul>
+	<div id="pelmenu"><li><a target="_self" href="eratostenes.html">Eratóstenes</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="descomposicio.html">Descomposición</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="cifrasdepi.html">Cifras de $\pi$</a></li></div>
+	
+</ul>
+</nav>
+<header>
+
+<h1>Teoría de Números</h1>
+
+
+</header>
+
+<section>
+
+<p style="margin-left: 30px;"  ><h3 onmouseover = "infor()" onmouseout = "noinfor()">Criba de Eratóstenes, información </h3></p>
+<br>
+<div id="informacio" style="display:none">
+<p >Eratóstenes, 275 a.C. Cirene (actual Libia), estudió en Alejandría y durante algún tiempo en Atenas. Gran amigo de Arquímedes. En el año 236 a. C., Ptolomeo III le llamó para que se hiciera cargo de la Biblioteca de Alejandría, puesto que ocupó hasta el fin de sus días.</p>
+<br>
+<p >La criba de Eratóstenes es un algoritmo que permite hallar todos los números primos menores que un número natural dado n.<br>
+Creamos una lista de números naturales entre 1 y n, que iremos cribando para dejar sólo los números primos.<br>
+En el primer paso cribamos (eliminamos) de la lista todos los múltiplos de 2 (excepto él mismo) y marcamos como primo el primer número de la lista que no ha sido cribado (en el primer paso será el 3). Evaluamos si el cuadrado de ese nuevo primo es menor o igual que n, en caso afirmativo el proceso continúa.<br>
+El proceso continúa cribando los múltiplos del nuevo primo y decidiendo si el proceso continúa.<br>
+Cuando se decide parar el proceso, la lista cribada contiene sólo los números primos que estábamos buscando.</p><br>
+
+</div>
+
+
+<p style="margin-left: 60px;" >n &nbsp;&nbsp;<input id="ene" size="2"value="0"> <br></p>
+
+
+
+<br>
+<input id="pinchable" type="button" value="Muestra los primos menores o iguales que n" onclick = "criba(), mostra()" style="margin-left: 60px;" />
+
+<br>
+<br>
+<div id="resultado" style="display:none"></div>
+<br>
+<br>
+
+</section>
+</div>
+
+<footer><div id="peu"></div></footer>
+
+</body>
+
+</html>
+
+

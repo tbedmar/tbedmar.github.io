@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Número pi" />
+  <meta name="keywords" content="pi" />
+  <title>Cifras decimales de pi</title>
+  <link  rel="stylesheet" href="css/estils2.css" />
+  <script src='js/modules/bignumber.js '></script >
+  <script src='js/modules/big.js '></script >
+  <script src='js/modules/math.js '></script >
+  <script src="js/cifrasdepi.js"></script>
+  <script SRC="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js">
+	MathJax.Hub.Config({
+ 		extensions: ["tex2jax.js"],
+  		jax: ["input/TeX","output/HTML-CSS"],
+  		tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+	});
+  </script>
+
+</head>
+
+
+<body onload="carregamenuipeu()">
+
+<div id="caixaprincipal">
+
+<nav>
+	<ul>
+	<div id="pelmenu"><li><a target="_self" href="eratostenes.html">Eratóstenes</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="descomposicio.html">Descomposición</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="cifrasdepi.html">Cifras de $\pi$</a></li></div>
+	
+</ul>
+</nav>
+<header>
+
+<h1>Teoría de Números</h1>
+
+
+</header>
+
+<section>
+
+<p style="margin-left: 30px;"  ><h4 >Cifras decimales del número $\pi$ </h4></p>
+<br>
+
+
+
+<p style="margin-left: 60px;" >número de iteraciones &nbsp;&nbsp;<input id="ene" size="2"value="0"> <br></p>
+
+
+
+<br>
+<input id="pinchable" type="button" value="Muestra la aproximación" onclick = "criba(), mostra()" style="margin-left: 60px;" />
+<br>
+<br>
+<div id="resultado" style="display:none"></div>
+<br>
+<br>
+
+</section>
+</div>
+
+<footer><div id="peu"></div></footer>
+
+</body>
+
+</html>
+
+

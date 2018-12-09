@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Ejemplo de HTML5" />
+  <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+  <title>Matemàtiques Financeres, Capitalització</title>
+  <link  rel="stylesheet" href="css/estils2.css" />
+  <script src="js/capitalitzacio.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="caixaprincipal">
+
+<nav>
+	<ul>
+	<div id="pelmenu"><li><a target="_self" href="prestec.html"> Prèstec</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="taula.html">Taula amortaizació</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="estalvi.html">Pla d'estalvi</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="capitalitzacio.html">Capitalització</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="TAE.html">T.A.E</a></li></div>
+</ul>
+</nav>
+<header>
+
+<h1>Matemàtiques Financeres</h1>
+
+</header>
+
+<section>
+
+<p style="margin-left: 30px;" ><h3>Calcula el capital final, el capiatal inicial o el temps a un procés de capitalització</h3></p>
+
+<br>
+<p style="margin-left: 60px;" >Capitat inicial &nbsp;&nbsp;<input id="capital" size="2"value="0" onchange="getCapital()"> <br></p>
+<p style="margin-left: 60px;" >Número d'anys&nbsp;&nbsp;  <input id="anys" size="2"value="0" onchange="getAnys()"></p>
+<p style="margin-left: 60px;" >Interès&nbsp;&nbsp;  <input id="interes" size="2"value="0" onchange="getInteres()"></p>
+<p style="margin-left: 60px;" >Freqüència d'amortització&nbsp;&nbsp;<input id="frequencia" size="2"value="0"onchange="getFrequencia()" ></p>
+<p style="margin-left: 60px;" >Capitat final &nbsp;&nbsp;<input id="capitalfinal" size="2"value="0" onchange="getCapitalFinal()"> <br></p>
+<br>
+<input id="pinchable" type="button" value="Calcula Capital final" onclick = "calculacapital()" style="margin-left: 60px;" />
+<input id="pinchable" type="button" value="Calcula Capital inicial" onclick = "calculacapitalfinal()" style="margin-left: 40px;" />
+<input id="pinchable" type="button" value="Calcula anys" onclick = "calculaanys()" style="margin-left: 40px;"/>
+
+<br>
+<br>
+<div id="resultado" style="display:none"><div id="rescapital"></div><div id="rescapitalfinal"></div><div id="resanys"></div></div>
+<br>
+<br>
+</section>
+</div>
+
+<footer>Toni Bedmar, 2016</footer>
+
+</body>
+</html>
+
+

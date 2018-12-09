@@ -1,0 +1,121 @@
+//Toni Bedmar, INS Bellulla de Canovlelles, 2016
+
+  
+// Carrega el menu (nav) i el peu de la pàgina (footer)
+
+function carregamenuipeu() { 
+var pelpeu='Toni Bedmar, 2017<br>INS Bellulla de Canovelles'
+document.getElementById("peu").innerHTML= pelpeu;  
+}
+
+
+
+function criba() { 
+BigNumber.config({ DECIMAL_PLACES: 20, ROUNDING_MODE: 4 })
+
+var s=new BigNumber(0);
+var a=new BigNumber(1);
+var setze=new BigNumber(16);
+var vuit=new BigNumber(8);
+var un=new BigNumber(1);
+var quatre=new BigNumber(8);
+var dos=new BigNumber(8);
+//a.toPrecision (20);
+//s.toPrecision (20);
+//var s=0;
+//var a=0;
+var n =document.getElementById("ene").value
+n= parseInt(n);
+
+for (var k=0; k<n; k++){
+	//(1/16**k)*(4/(8*k+1)-2/(8*k+4)-1/(8*k+5)-1/(8*k+6)
+	//a=un.dividedBy(setze.toPower(k));
+        a=quatre.dividedBy(vuit.times(k).plus(1));
+	a=a.minus(dos.dividedBy(vuit.times(k).plus(4)));
+	a=a.minus(un.dividedBy(vuit.times(k).plus(5)));
+	a=a.minus(un.dividedBy(vuit.times(k).plus(6)));
+	a=a.times(un.dividedBy(setze.toPower(k)));
+	s=s.plus(a);
+
+}
+
+return s;
+}
+
+
+function mostra(){
+
+var n =document.getElementById("ene").value
+var text="Los números primos menores o iguales que "+ n + " son:<br><br>";
+document.getElementById("resultado").style.display = "block";
+var final = criba ();
+document.getElementById("resultado").innerHTML= text + final ;
+
+}
+
+
+function descomposicio(){
+
+var n =document.getElementById("ene").value
+n= parseInt(n);
+var primers = criba ();
+var descomp =[];
+var descomp2 =[n];
+var res =""
+for (i = 1; i <= primers.length; i++) {
+	while (n % primers[i] == 0 ){
+		n= n / primers[i];
+		descomp.push(primers[i]);
+		descomp2.push(n);	
+	}
+}
+
+var descomp3 = descomp;
+var descompfinal = descomp.join(" · ");
+
+var factors=[];
+var expo=[];
+j=1;
+for (i = 0; i < descomp3.length; i++) {	
+	
+	if(descomp3[i]==descomp3[i+1]){j=j+1}
+		else{
+			factors.push(descomp[i]);
+			expo.push(j);
+			j=1}		
+	
+}
+
+document.getElementById("resultado").style.display = "block";
+
+
+var taularesulatat= '<table class="descomposicio"><tr><td >'+descomp2[0]+"</td><td style= background:gray;' rowspan="+1+descomp.length+"></td><td>" + descomp[0]+"</td></tr>";
+for (i = 1; i < descomp.length; i++) {
+taularesulatat=taularesulatat+"<tr><td>"+descomp2[i]+"</td><td>" + descomp[i]+"</td></tr>";
+}
+taularesulatat=taularesulatat+"<tr><td>1</td><td></td></tr></table><br>";
+
+var m =document.getElementById("ene").value
+
+taularesulatat=taularesulatat + m +  " = ";
+
+taularesulatat=taularesulatat +descompfinal+" = " ;
+
+
+for (i = 0; i < factors.length-1; i++) {
+if (expo[i]==1){taularesulatat=taularesulatat+factors[i]+" · "}
+else {taularesulatat=taularesulatat+factors[i]+"<sup>"+expo[i]+"</sup>"+" · "}
+}
+
+if (expo[i]==1){taularesulatat=taularesulatat+factors[factors.length-1]}
+else {taularesulatat=taularesulatat+factors[factors.length-1]+"<sup>"+expo[factors.length-1]+"</sup>"}
+
+;	
+document.getElementById("resultado").innerHTML= taularesulatat;
+
+
+
+
+}
+
+

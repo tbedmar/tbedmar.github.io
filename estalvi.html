@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es" >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Ejemplo de HTML5" />
+  <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+  <title>Matemàtiques Financeres, pla d'estalvi</title>
+  <link  rel="stylesheet" href="css/estils2.css" />
+  <script src="js/estalvi.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="caixaprincipal">
+
+<nav>
+	<ul>
+	<div id="pelmenu"><li><a target="_self" href="prestec.html"> Prèstec</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="taula.html">Taula amortaizació</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="estalvi.html">Pla d'estalvi</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="capitalitzacio.html">Capitalització</a></li></div>
+	<div id="pelmenu"><li><a target="_self" href="TAE.html">T.A.E</a></li></div>
+</ul>
+</nav>
+<header>
+
+<h1>Matemàtiques Financeres</h1>
+
+</header>
+
+<section>
+
+<p style="margin-left: 30px;" ><h3>Calcula el capital estalviat a un pla d'estalvi o les aportacions que cal fer per obtenir un estalvi determinat</h3></p>
+<br>
+<p style="margin-left: 60px;" >Aportació&nbsp;&nbsp;<input id="aportacio" size="2"value="0" onchange="getAportacio()"> <br></p>
+<p style="margin-left: 60px;" >Número d'anys&nbsp;&nbsp;  <input id="anys" size="2"value="0" onchange="getAnys()"></p>
+<p style="margin-left: 60px;" >Interès&nbsp;&nbsp;  <input id="interes" size="2"value="0" onchange="getInteres()"></p>
+<p style="margin-left: 60px;" >Freqüència d'aportació&nbsp;&nbsp;<input id="frequencia" size="2"value="0" onchange="getFrequencia()"></p>
+<p style="margin-left: 60px;" >Capiatal estalviat&nbsp;&nbsp;<input id="capital" size="2"value="0" onchange="getCapital()"></p>
+<br>
+<input id="pinchable" type="button" value="Calcula capital estalviat" onclick = "calculaestalvi()" style="margin-left: 60px;" />
+<input id="pinchable" type="button" value="Calcula aportació" onclick = "calculaaportacio()" style="margin-left: 60px;" />
+<br>
+<br>
+<div id="resultado" style="display:none"><div id="resestalvi"></div><div id="resaportacio"></div></div>
+<br>
+
+</section>
+</div>
+
+<footer>Toni Bedmar, 2016</footer>
+
+
+
+</body>
+
+
+
+
+
+</html>
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>CalculadoraRuner</title>
+<link href="css/estils.css" rel="stylesheet" type="text/css"/>
+<script src="js/calcrunner.js"></script>
+
+ 
+</head>
+
+<body >
+<div id="columnagran">
+<div id="peucolumna">
+
+<h1 style="margin-left: 40px;">Calculadora Runner</h1>
+
+</div>
+<div id="columnarunner">
+<p style="margin-left: 80px;" ><img style="width: 117px; height: 167px;" alt="runner.gif" src="imatges/runner.gif"><br></p>
+</div>
+<div id="columnadreta">
+<p style="margin-left: 30px;" ><big>Calcula el paso en minutos y segundos a partir de la distancia y el tiempo</big></p>
+<p style="margin-left: 60px;" >¿Qué distancia quieres correr?&nbsp;&nbsp; <input id="distancia" size="2"value="0"> Km <br></p>
+<p style="margin-left: 60px;" >¿En cuánto tiempo?&nbsp;&nbsp;  <input id="horas" size="2"value="0"> horas y <input id="minutos" size="2"value="0"> minutos </p>
+<input id="pinchable" type="button" value="Calcula el paso" onclick = "calculapas()" style="margin-left: 60px;" />
+<br>
+<br>
+<div id="resultado" style="display:none"><div id="respasminuts"></div></div>
+<br>
+<br>
+<br>
+<p style="margin-left: 30px;" ><big>Calcula el tiempo en recorrer una distancia a un paso determinado en minutos y segundos</big></p>
+<p style="margin-left: 60px;" >¿Qué distancia quieres correr?&nbsp;&nbsp; <input id="distancia2" size="2"value="0"> Km <br></p>
+<p style="margin-left: 60px;" >¿A qué paso vas a correr? &nbsp;&nbsp;  <input id="minutospaso"size="2"value="0"> minutos y <input id="segundospaso"size="2"value="0"> segundos</p>
+<input type="button" value="Calcula el tiempo" onclick = "distancia()" style="margin-left: 60px;" />
+<br>
+<br>
+<div id="resultado2" style="display:none"><div id="respasminuts2"></div></div>
+<br>
+<br>
+<br>
+</div>
+<div id="peucolumna"><p ALIGN=right style="margin-right: 40px;"><small>Toni Bedmar 2013</small></p></div>
+</div>
+
+
+
+</body>
+
+
+</html>

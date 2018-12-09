@@ -1,0 +1,193 @@
+//Toni Bedmar, INS Bellulla de Canovlelles, 2016
+
+// Prova funcions
+
+
+
+//Toni Bedmar, INS Bellulla de Canovlelles, 2016
+
+// Càlcul determinants
+
+
+
+ 
+function generaTaula(){ 
+  
+columnes= document.getElementById("dimensio").value;
+n = parseInt(columnes);
+
+
+
+content = document.getElementById("contingut");
+
+var taula = document.createElement("TABLE");
+taula.border="2";
+
+var instruccions = document.createElement("P");
+var node = document.createTextNode("Introdueix els valors de la matriu de la que farem el determinant.");
+instruccions.appendChild(node);
+
+
+for (var i=0; i<n; i++){
+	
+	var tri = document.createElement("TR");
+
+		for (var j=0; j<n; j++){  
+    
+		var tdj = document.createElement("TD");
+		var a = document.createElement("INPUT");
+   			
+			a.setAttribute("type", "text");
+			a.setAttribute("size", 2);
+			a.setAttribute("name","a"+i+""+j);
+			if(i== 0 && j== 0){
+				a.focus();
+				}			
+			if(i== n-1 && j==n-1){
+				a.setAttribute("onchange","mostrataula ()");
+				}
+			
+			var sugerencia= "a"+(i+1)+""+(j+1);
+			a.placeholder= sugerencia;
+		tri.appendChild(tdj); 
+		tdj.appendChild(a);
+
+		}  
+		    
+                   
+	taula.appendChild(tri);
+
+}
+
+	content.appendChild(instruccions);
+
+	content.appendChild(taula);
+
+}
+
+
+function mostrataula () {
+
+matriuValors= new Array(n);
+	for (var i=0; i<n; i++){ 
+		matriuValors[i]= new Array(n);
+			for (var j=0; j<n; j++){ 
+				matriuValors[i][j]=document.getElementsByName("a"+i+""+j)[0].value;
+			}
+	}
+
+var espai = document.createElement("BR");
+
+var resultat = document.createElement("P");
+
+var node = document.createTextNode(det23());
+
+resultat.appendChild(node);
+content.appendChild(resultat);
+
+
+
+function det23(){
+
+v= new Array(n);
+	for (var i=0; i<n; i++){ 
+		v[i]= new Array(n);
+			for (var j=0; j<n; j++){ 
+				v[i][j]= parseInt(matriuValors[i][j]);
+				
+			}
+	}
+
+switch (true){
+		case (n==2):
+		var det="El determinant d'aquesta matriu d'ordre 2, val ";
+		det+=det2(v);
+		return det;
+		break;
+		
+		case (n==3):
+		var det="El determinant d'aquesta matriu d'ordre 3, val ";
+		det+=det3(v);
+		return det;
+		break;
+
+		case (n==4):
+		var det="El determinant d'aquesta matriu d'ordre 4, val ";
+		det+=det4(v);
+		return det;
+		break;
+		
+		case (n > 4):
+		var det="Determinant massa gran...";
+		return det;
+		break;
+
+		}
+
+}
+
+
+}
+
+
+
+function det2 (a){
+	var det = a[0][0]*a[1][1]-a[0][1]*a[1][0];
+
+	return det;
+	}
+
+
+
+
+function det3 (a){
+	
+	var det= a[0][0]*a[1][1]*a[2][2];
+	   det+= a[0][1]*a[1][2]*a[2][0];
+	   det+= a[0][2]*a[1][0]*a[2][1];
+	   det-= a[0][2]*a[1][1]*a[2][0];
+	   det-= a[0][1]*a[1][0]*a[2][2];
+	   det-= a[1][2]*a[2][1]*a[0][0];	
+	
+	return det;
+	}
+
+
+
+
+
+
+
+function det4 (a){
+
+//desenvolupa pels adjunts de la primera fila
+
+	//Hauria de buscar una forma alternativa de trobar els menors, fent ús de slice...	
+	var menor00= new Array(3)
+		for (var i=0; i<3; i++){
+			menor00[i]=[a[i+1][1],a[i+1][2],a[i+1][3]]; 
+			}
+
+	var menor01= new Array(3);
+		for (var i=0; i<3; i++){
+			menor01[i]=[a[i+1][0],a[i+1][2],a[i+1][3]]; 
+			}
+ 
+	var menor02= new Array(3);
+		for (var i=0; i<3; i++){
+			menor02[i]=[a[i+1][0],a[i+1][1],a[i+1][3]]; 
+			}
+		
+	var menor03= new Array(3);
+		for (var i=0; i<3; i++){
+			menor03[i]=[a[i+1][0],a[i+1][1],a[i+1][2]]; 
+			}
+		
+
+	var det= a[0][0]*det3(menor00)-a[0][1]*det3(menor01)+a[0][2]*det3(menor02)-a[0][3]*det3(menor03);
+		
+		return det;
+
+}
+
+

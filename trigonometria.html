@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head> 
+
+<title>Resolució de triangles rectangles</title>
+<link href="css/estils.css" rel="stylesheet" type="text/css"/>
+<script src="js/trigonometria.js"></script>
+
+</head>
+
+<body >
+<div id="columnagran">
+<div id="peucolumna">
+	<h1 style="margin-left: 40px;">Resolució de triangles rectangles</h1>
+</div>
+
+<div id="columna1">
+<p style="margin-left: 30px;" ><big>Farem servir trigonometria per a <b>resoldre</b> triangles rectangles. La qual cosa vol dir, calcular tots els seus angles i tots els seus costats.</big></p>
+<canvas style="display:none; margin-left: 50px;" id="TRIANGLE" width="460" height="220"></canvas>
+<div style="display:block; margin-left: 50px;" id="esquematriangle"> <IMG SRC="imatges/triangle2.png" ></div>
+</div>
+<div id="columna2">
+<p style="margin-left: 30px;" ><big>Introdueix les dades que ja tens del triangle.</big></p>
+<p style="margin-left: 30px;" >Has de donar dos costats del triangle o un dels costats i un dels angles aguts.</p>
+<br>
+<p style="margin-left: 30px;" ><big>Costats</big></p>
+<div style="margin-left: 70px; id="etiqueta costat a"> 
+ a <input id="hipotenusa" onchange= "introcoef()" size="2" >
+ b <input id="catet b" onchange= "introcoef()" size="2" >
+ c <input id="catet c" onchange= "introcoef()" size="2" ></div>
+<p style="margin-left: 30px;" ><big>Angles (A = 90º)   </big></p>
+<div style="margin-left: 70px; id="etiqueta angle A">
+B <input id="angle B" onchange= "introcoef()" size="2" >
+ C <input id="angle C" onchange= "introcoef()" size="2" ></div>
+</div>
+
+<div id="peucolumna">
+<br>
+<input style="margin-left: 400px;" id="calcular" type="button" value="Calcula" onclick = "calcula()">
+<input  id="netejar" type="button" value="Neteja" onclick = "neteja()">
+<br>
+<div id="resultat" style="display:none; margin-left: 50px;"></div>
+<br>
+</div>
+
+
+
+<!-- Peu de pàgina -->
+<div id="peucolumna"><p ALIGN=right style="margin-right: 30px; "><small>Toni Bedmar 2015</small></p></div>
+</div></div>
+</body>
+
+</html>

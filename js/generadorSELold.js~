@@ -1,0 +1,59 @@
+//Generador SEL
+//Toni Bedmar, INS Bellulla de Canovlelles, 2016
+//
+
+
+
+//Introducció de la matriu dels coeficients i la solució del sitema
+
+function introcoef() {
+	
+//LLegim les dimensions de la matriu dels coeficients	
+var files= document.getElementById("files").value;
+var columnes= document.getElementById("columnes").value;
+m = parseInt(files);
+n = parseInt(columnes);
+
+var matriuCoef="<table border='0'>";
+
+matriuCoef+='<p>Ara escriu els valors de la matriu dels coeficients:</p><br>';
+
+for(var i=0; i<m; i++){
+
+matriuCoef+="<tr>";
+for(var j=0; j<n; j++){
+matriuCoef+="<td><input type=text value=' ' name='a'" + i+j + " size=2></td></td>";
+}
+matriuCoef+="</tr>";
+}
+matriuCoef+='</table>';
+
+document.getElementById("matriuA").innerHTML= matriuCoef;
+
+}
+
+function lectura(){
+//Lectura matriu
+matriu= new Array (n);
+
+for(var i=0; i<m; i++){
+	matriu[i]=new Array (m);
+		for(var j=0; j<n; j++){
+			matriu[i][j]=eval(document.getElementsByName("a")[1][j].value);
+				      }
+document.getElementById("matriuB").innerHTML= matriu[0][0]+"+"+matriu[0][1]+"+"+matriu[0][2];
+}
+}
+
+function calculaMatriuB() {
+
+var equacions= document.getElementById("files").value;
+var mostra=document.getElementsByName("a")[0][0].value;
+var matriuIndep='<p>';
+matriuIndep+= mostra+'</p>';
+document.getElementById("matriuB").innerHTML= matriuIndep;
+
+
+}
+
+

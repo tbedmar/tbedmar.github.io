@@ -1,0 +1,49 @@
+  #columnagran {background-color:#69d8ff ; float:left ; width:1000px ; margin:3px 3px ; padding:6px ; border-radius:5px }
+  #columna {background-color:#b3c833  ; float:left ; width:240px ; margin:3px 3px ; padding:6px ; border-radius:5px }
+  #columnarunner {background-color:#b3c833  ; float:left ; width:240px ; height: 442px; margin:3px 3px ; padding:6px ; border-radius:5px }
+  #columna1 {background-color:#b3c833  ; float:left ; width:560px ; height:340px;margin:3px 3px ; padding:6px ; border-radius:5px }
+  #columna2 {background-color:#b3c833  ; float:left ; width:400px ; height:340px;margin:3px 3px ; padding:6px ; border-radius:5px }
+  #columnadreta {background-color:#b3c833  ; float:left ; width:722px;  margin:3px 3px ; padding:6px ; border-radius:5px }
+  #resultado {background-color:green; float:left ; width:280px ; margin:3px 60px ; padding:6px ; border-radius:5px }
+  #resultado2 {background-color:green; float:left ; width:440px ; margin:3px 60px ; padding:6px ; border-radius:5px }
+  #peucolumna {background-color:#b3c833  ; float:left ; width:980px ; margin:3px 3px ; padding:6px ; border-radius:5px }
+
+body {
+	margin-left: 138px;
+	margin-top: 10px;
+	left: 8px;
+	top: 2px;
+	background-color: orange;
+	font-family: Tahoma;
+}
+
+/*table {
+       border:1px solid black;
+       border-collapse:separate;
+       
+       }
+caption {
+       
+       font-size:20px;
+       padding:12px;
+       font-family:"Arial", sans-serif;
+       text-align: left;
+ 
+       }
+thead {
+          
+       background-color:green;
+       font-size:18px;
+       font-family:"Arial", sans-serif;
+       
+       }
+    tr.color {
+       background-color:#ACACAC;
+       }
+    td {
+       border:1px solid black;
+       padding:5px;
+       text-align: right;
+       }
+*/
+
