@@ -1,0 +1,83 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box; }
+
+body {heigth: 60px;}
+  
+.caixaprincipal {
+  heigth: 60px;
+  display: grid; 
+  grid-template-areas: "head " 
+                       "content";                      
+  grid-template-rows: 50px 550px;  
+  justify-items: center;
+}
+
+.graella {
+  display: grid;
+  background-color: #EAECEE;
+  border-radius:4px;
+  grid-template-columns: repeat(3, 42px) ;
+  grid-template-rows: repeat(3, 42px) ;
+  grid-column-gap: 4px;
+  grid-row-gap: 4px;
+}
+
+.graelladreta {
+  display: inline-grid;
+  background-color: #EAECEE;
+  border-radius:4px;
+  grid-template-rows:  45px ;
+  grid-template-columns: repeat(9, 45px) ;
+  grid-column-gap: 4px;
+}
+
+
+.item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius:4px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 34px;
+  text-align: center;
+ }
+
+
+header,nav,section {width: 80%;  padding: 10px 30px;} 
+
+#images {
+  
+  padding: 40px 30px 0px 60px;
+}
+
+#contingut { 
+  padding: 30px 90px 10px 60px;
+}
+
+#comprovacio {
+  font-size: 26px;
+  color: #464648;
+}
+
+header {
+  grid-area: head;
+  background-color: #ABB2B9  ;
+  font-size: 20px;
+} 
+
+section {
+  grid-area: content;
+  background-color: #EAECEE;
+} 
+
+
+h3 {margin: 0px 0px 10px 0px ;}
+
+footer {
+  background-color: #ABB2B9 ;
+  text-align: right;
+  padding:6px 20px;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
