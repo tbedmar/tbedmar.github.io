@@ -1,8 +1,8 @@
+//variables globals
 var matriu= new Array (9);
 var comptadrop=0;
 
-
-
+//comprovació quadrat màgic
 function comprovacio(){
 
 var sf1= matriu[0]+matriu[1]+matriu[2]; //suma elements de la fila 1
@@ -50,46 +50,36 @@ document.getElementById("comprovacio").innerHTML= missatge;
 }
 
 
-/*
-
-
-if //condicional per a veure si s les columnes i les files sumen igual
-
-if // condicional per veure si les sumes de les diagonlas són iguals a les sumes anteriors
-
-}
-
-
-
-
-}*/
-
-
 function allowDrop(ev) {
-  ev.preventDefault();
+ ev.preventDefault();
 }
-
 
 
 function drag(ev) {  
   ev.dataTransfer.setData("text", ev.target.id);
-  
+ 
 }
 
-function drop(ev, valor) {
+
+function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   ev.target.style.backgroundColor = "grey";
-  var lloc= ev.target.id;
+  var lloc= ev.target.id; 
   lloc= lloc.slice(5, 6)-1;
   matriu[lloc]=parseInt(data.slice(5, 6));
   //alert("Hem escrit un "+data.slice(5, 6)+" al lloc "+lloc.slice(5, 6));
   comptadrop+=1;
   if(comptadrop == 9){comprovacio()}
   
-
 }
+
+function end(ev){					
+        var id = ev.target.id; // Element arrossegat	
+        document.getElementById(id).setAttribute("draggable", "false");//per evitar que es pugui tornar a arrossegar
+}
+
 
 window.addEventListener("load",dibuixataulas);
 
@@ -101,7 +91,7 @@ var items="";
 
 	for(var j=1; j<= 9; j++)
 		{	
-		items+="<p class='item'id='dropo"+j+"' ondrop='drop(event)' ondragover='allowDrop(event)' ></p>";	
+		items+="<p class='item'id='dropo"+j+"' ondrop='drop(event)' ondragend='end(event)' ondragover='allowDrop(event)' ></p>";	
 		}
 x[0].innerHTML = items;
 
