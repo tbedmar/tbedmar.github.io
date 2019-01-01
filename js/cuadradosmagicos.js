@@ -73,11 +73,11 @@ function drop(ev) {
   matriu[lloc]=parseInt(data.slice(5, 6)); //omplim la matriu per a les comprovacions
   ev.target.appendChild(document.getElementById(data));
   ev.target.style.backgroundColor = "grey";
-  ev.target.delegateEvents(); //evitem que es pugui deixar anar a sobre d'un dropo més d'una vegada
-  matriu[lloc]=parseInt(data.slice(5, 6));
-  //alert("Hem escrit un "+data.slice(5, 6)+" al lloc "+lloc.slice(5, 6));
+  //alert("Hem escrit un "+data.slice(5, 6))+" al lloc "+lloc.slice(5, 6));
   comptadrop+=1; 
   if(comptadrop == 9){comprovacio()}
+  
+  ev.target.delegateEvents(); //evitem que es pugui deixar anar a sobre d'un dropo més d'una vegada
   
 }
 
